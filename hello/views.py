@@ -4,8 +4,14 @@ from .models import Post
 def index(request):
     return render(request, 'index.html')
 
-def page(request):
-    return render(request, 'page.html')
+def about(request):
+    return render(request, 'about.html')
+
+def start(request):
+    return render(request, 'start.html')
+
+def destinations(request):
+    return render(request, 'destinations.html')
 
 def test(request):
     context = {
