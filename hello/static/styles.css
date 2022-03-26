@@ -199,12 +199,113 @@ hr {
 /* Featured Posts */
 
 /* Country Div */
-.country {
+.featured-countries {
     color: rgb(0, 191, 255);
-    background-color: rgb(26, 25, 24);
+    background-color: black;
     text-align: center;
     padding-top: 1px;
 }
 
+.country-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.country {
+    background-color: rgb(0, 191, 255);
+    margin: 50px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+}
+
+.country a {
+    color: black;
+    text-decoration: none;
+}
+
+.country h2 {
+    background-color: rgb(8, 148, 161);
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(0, 0, 0);
+}
 
 /* Country Div */
+
+/* About Div */
+.about {
+    color: rgb(0, 191, 255);
+    background-color: rgb(26, 25, 24);
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.featured-image2 {
+    display: block;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    background-color: rgb(0, 191, 255);
+    padding: 10px;
+}
+
+.about-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: 30%;
+}
+
+.about-image {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+}
+
+.about-text h3 {
+    color: black;
+    background-color: rgb(0, 191, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+    text-align: center;
+}
+
+.about-text a {
+    text-decoration: none;
+}
+
+.about-text h4 {
+    color: black;
+    padding: 10px;
+    max-width: 350px;
+    background-color: rgb(0, 191, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+    text-align: center;
+}
+
+
+
+
+
+/* About Div */
