@@ -1,3 +1,4 @@
+/* Home Page */
 /* Top Navbar */
 header {
     display: flex;
@@ -126,7 +127,7 @@ hr {
     padding-bottom: 15px;
 }
 .featured-block1 {
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 157, 209);
     margin: 50px;
     padding: 10px;
     border-style: solid;
@@ -147,7 +148,7 @@ hr {
 }
 
 .featured-block2 {
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 157, 209);
     margin: 50px;
     padding: 10px;
     border-style: solid;
@@ -168,7 +169,7 @@ hr {
 }
 
 .featured-block3 {
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 157, 209);
     margin: 50px;
     padding: 10px;
     border-style: solid;
@@ -216,7 +217,7 @@ hr {
 }
 
 .country {
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 157, 209);
     margin: 50px;
     padding: 10px;
     border-style: solid;
@@ -230,7 +231,7 @@ hr {
 }
 
 .country h2 {
-    background-color: rgb(8, 148, 161);
+    background-color: rgb(0, 101, 138);
     border-style: solid;
     border-width: 4px;
     border-color: rgb(0, 0, 0);
@@ -253,7 +254,7 @@ hr {
     height: 400px;
     object-fit: cover;
     object-position: center;
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 157, 209);
     padding: 10px;
 }
 
@@ -274,10 +275,10 @@ hr {
 
 .about-text h3 {
     color: black;
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 157, 209);
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 10px;
     border-style: solid;
     border-width: 4px;
@@ -293,7 +294,7 @@ hr {
     color: black;
     padding: 10px;
     max-width: 350px;
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(0, 157, 209);
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 0;
@@ -304,3 +305,71 @@ hr {
     text-align: center;
 }
 /* About Div */
+/* Home Page */
+
+/*/
+
+/* About Page */
+.about-main-img {
+    width: 100%;
+}
+
+.top-pics-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.top-pics-about h1 {
+    color: rgb(0, 191, 255);
+    margin-top: 50px;
+    margin-left: 320px;
+}
+
+.top-pics-about p {
+    color: black;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-left: 200px;
+    max-width: 400px;
+    max-height: 300px;
+    background-color: rgb(0, 157, 209);
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+    padding: 10px;
+}
+
+.about-pic1 {
+    width: 400px;
+    height: 400px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 80px;
+    background-color: rgb(0, 157, 209);
+    padding: 5px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+}
+
+.about-pic2 {
+    width: 400px;
+    height: 400px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    background-color: rgb(0, 157, 209);
+    padding: 5px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+}
+
+.about-center {
+    padding-top: 1px;
+    background-color: rgb(26, 25, 24);;
+}
+/* About Page */
