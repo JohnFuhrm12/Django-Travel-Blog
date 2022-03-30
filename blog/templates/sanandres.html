@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{%load crispy_forms_tags %}
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="This is a travel blog">
@@ -59,6 +60,24 @@
                 <img src="../static/SanAndres/acuario1.jpg" class="blog-pic-med" alt="Image of Beach">
                 <img src="../static/SanAndres/haynes1.jpg" class="blog-pic-med" alt="Image of Beach">
                 <p2>There is another much larger island right alongside this one (Haynes Cay), but without the good beaches and swimming areas so it's best to go there to get away from the crowds or get something to eat.</p2>
+            </div>
+        </div>
+        <div class="comment-section-container">
+            <div class="comment-form">
+                <h2>Leave a Comment</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input class="post-comment" type="submit" value="Post Comment">
+                </form>
+            </div>
+            <div class="comments">
+                {% for comment in comments %}
+                    <div class="comment-box">
+                        <h3>By {{ comment.name }} on {{ comment.date_created }}</h3>
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <div class="nav-bottom">
