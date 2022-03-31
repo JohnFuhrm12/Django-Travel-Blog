@@ -18,3 +18,22 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ['name', 'comment']
+
+
+# Create database fields for comment info for each page
+class CommentRiviera(models.Model):
+    name = models.CharField(max_length=30)
+    comment = models.CharField(max_length=150)
+    date_created = models.DateField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-date_created"]
+
+    def __str__(self):
+        return self.comment
+
+# Link comment database model to a form model
+class CommentFormRiviera(ModelForm):
+    class Meta:
+        model = CommentRiviera
+        fields = ['name', 'comment']

@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Comment
 from .models import CommentForm
+from .models import CommentRiviera
+from .models import CommentFormRiviera
 
 def index(request):
     return render(request, 'index.html')
@@ -29,3 +31,19 @@ def sanandres(request):
         'form': form
     }
     return render(request, 'sanandres.html', context)
+
+def rivieramaya(request):
+    if request.method == 'POST':
+        form = CommentFormRiviera(request.POST)
+        if form.is_valid():
+            form.save()
+            name = form.cleaned_data.get('name')
+            comment = form.cleaned_data.get('comment')
+            form = CommentFormRiviera()
+    else:
+        form = CommentFormRiviera()
+    context = {
+        'comments': CommentRiviera.objects.all(),
+        'form': form
+    }
+    return render(request, 'rivieramaya.html', context)
