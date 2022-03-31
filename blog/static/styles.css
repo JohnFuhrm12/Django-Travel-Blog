@@ -512,6 +512,7 @@ hr {
 .comment-section-container {
     background-color: black;
 }
+
 .comment-form {
     font-size: 25px;
     padding-left: 50px;
@@ -569,3 +570,51 @@ hr {
 }
 /* Comment Section */
 
+/* Contact Me Form */
+.contact-me-container {
+    background-image: linear-gradient(red, yellow);
+}
+
+.contact-form {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-image: linear-gradient(to bottom right, rgb(26, 25, 24), rgb(56, 56, 56));
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(219, 219, 219);
+}
+
+#id_first_name {
+    font-size: 25px;
+    width: 250px;
+    padding: 0 0 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#id_last_name {
+    font-size: 25px;
+    width: 250px;
+    padding: 0 0 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#id_email_address {
+    font-size: 25px;
+    width: 250px;
+    padding: 0 0 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#id_message {
+    font-size: 25px;
+    width: 500px;
+    height: 200px;
+    margin-top: 5px;
+}
+/* Contact Me Form */
