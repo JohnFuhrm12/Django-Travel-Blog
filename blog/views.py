@@ -3,12 +3,32 @@ from .models import Comment
 from .models import CommentForm
 from .models import CommentRiviera
 from .models import CommentFormRiviera
+from .models import ContactForm
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 
 def index(request):
     return render(request, 'index.html')
 
 def about(request):
-    return render(request, 'about.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = "Website Inquiry"
+            body = {
+                'first_name': form.cleaned_data['first_name'],
+                'last_name': form.cleaned_data['last_name'],
+                'email': form.cleaned_data['email_address'],
+                'message': form.cleaned_data['message'],
+            }
+            message = "\n".join(body.values())
+
+            try:
+                send_mail(subject, message, 'johnfuhrmeister12@gmail.com', ['johnfuhrmeister12@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+    form = ContactForm()
+    return render(request, 'about.html', {'form': form})
 
 def start(request):
     return render(request, 'start.html')
