@@ -24,5 +24,6 @@ urlpatterns = [
     path('start', views.start),
     path('destinations', views.destinations),
     path('sanandrés', views.sanandres),
+    path('rivieramaya', views.rivieramaya),
 ]
 
