@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load crispy_forms_tags %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a travel blog">
+        <title>Latin Nomad - Destinations</title>
+        <link rel="stylesheet" href="../static/styles.css">
+        <link rel="shortcut icon" type="image/png" href="../static/favicon.png"/>
+        <script src="../static/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <li><a href="home"><h1>Latin Nomad</h1></a></li>
+            <nav>
+                <ul class="top-nav">
+                    <li><a href="start"><h1>Start Here</h1></a></li>
+                    <li><a href="destinations"><h1>Destinations</h1></a></li>
+                    <li><a href="about"><h1>About</h1></a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <div class="post-main-content">
+            <img src="../static/BuenosAires/argentina-featuredtxt.jpg" class="blog-pic-main" alt="Image of BuenosAires">
+            <h1>Your Guide to Argentina's Capital</h1>
+            <div class="paragraph-block">
+                <p1>In the mood for BBQ, wine, mate, and architecture straight from Europe? Look no further than the capital of Argentina in South America.</p1>
+                <p1>Here are the best areas around the city and surrounding province of the land of football (soccer!) and wine.</p1>
+            </div>
+            <h1>Palermo/Recoleta</h1>
+            <div class="paragraph-block">
+                <p1>These are two high-class neighborhoods filled with restaurants, bars, hostels and nice streets with interesting architecture. It's a great option to base your stay with the city and is only a quick Uber o metro ride away from most other popular sections of the city.</p1>
+                <img src="../static/BuenosAires/ba-me.jpg" class="blog-pic-med" alt="Image of BuenosAires">
+                <p1>Some great places to go in this area are the large parks to the north end of Palermo, filled with palm trees, parrots, runners and even a Japanese garden! You can also visit the nearby Planetarium and Botanic garden, as this is a large area of the city that is completely filled with parks and green areas. Also be sure to check out the cemetery for the rich and famous in Recoleta.</p1>
+                <img src="../static/BuenosAires/cem1.jpg" class="blog-pic-med" alt="Image of BuenosAires">
+                <img src="../static/BuenosAires/palermo1.jpg" class="blog-pic-wide" alt="Image of BuenosAires">
+            </div>
+            <h1>Puerto Madero</h1>
+            <div class="paragraph-block">
+                <p1>This is another high class area more on the coast of the Río de la Plata, it has some great bars on the waterfront making it perfect for a night out. Along this strip includes the Puente de la Mujer (Women's bridge) famous for it's interesting design.</p1>
+                <img src="../static/BuenosAires/puertomadero2.jpg" class="blog-pic-wide" alt="Image of BuenosAires">
+                <p1>The area around the waterfront is mostly high-rises, but the go directly behind and within a few minutes you'll arrive at 2 incredible places in the city, Plaza de Mayo and Plaza de la República!</p1>
+                <img src="../static/BuenosAires/casita1.jpg" class="blog-pic-med" alt="Image of BuenosAires">
+                <p1>These areas have some of the best European style architecture the city has to offer, straight from Paris. In Plaza de Mayo you will find the capital building La Casa Rosada named for it's rosy color, and then entering Plaza de la República to see be in a European styled Times Square, complete with the countries famous monument, El Obelisco.</p1>
+                <img src="../static/BuenosAires/plaza2.jpg" class="blog-pic-med" alt="Image of BuenosAires">
+                <img src="../static/BuenosAires/obelisco.jpg" class="blog-pic-med" alt="Image of BuenosAires">
+            </div>
+            <h1>Mar de las Pampas</h1>
+            <div class="paragraph-block">
+                <p1>If you venture a few hours south of the city, you will exchange the coast along the river for the Atlantic. The beaches here aren't spectacular and could easily be what you could find in New Jersey, but with some strange twists to make things interesting.</p1>
+                <img src="../static/BuenosAires/carilo1.jpg" class="blog-pic-small" alt="Image of BuenosAires">
+                <p1>I specifically went to Mar de las Pampas, but the more famous area just about 20 minutes away is Cariló. These areas are mostly private, upper class areas with some huge houses, log cabins, and German style houses. Another cool feature about the beach are the massive sand dunes before getting to the water!</p1>
+                <img src="../static/BuenosAires/carilo2.jpg" class="blog-pic-med" alt="Image of BuenosAires">
+                <p2>You can explore the oddly designed markets and towns near the beach, sandboard the dunes, or go surfing! Or of course, have some mate on the sand. It gets pretty cold here at night, but is warm during the day, and can get crowded when its sunny.</p2>
+            </div>
+        </div>
+        <div class="comment-section-container">
+            <div class="comment-form">
+                <h2>Leave a Comment</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input class="post-comment" type="submit" value="Post Comment">
+                </form>
+            </div>
+            <div class="comments">
+                {% for comment in comments %}
+                    <div class="comment-box">
+                        <h3>By {{ comment.name }} on {{ comment.date_created }}</h3>
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <button class="topbutton" data-top-button>Go to Top</button>
+        </div>
+    </body>
+</html>
