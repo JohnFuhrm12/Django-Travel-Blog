@@ -111,6 +111,7 @@ hr {
     transition: 200ms opacity ease-in-out;
     transition-delay: 0ms;
 }
+
 .slide img {
     display: block;
     width: 100%;
@@ -618,3 +619,45 @@ hr {
     margin-top: 5px;
 }
 /* Contact Me Form */
+
+/* Explore By Country Pages */
+.country-desc p1 {
+    display: block;
+    margin-top: 50px;
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+}
+/* Explore By Country Pages */
+
+/* Start/Destinations Pages */
+.header-photo {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.start-main-content {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.start-main-content h1 {
+    font-size: 40px;
+    color: rgb(0, 191, 255);
+}
+
+.start-main-content p1 {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+}
+/* Start/Destinations Pages */
