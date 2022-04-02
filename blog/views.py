@@ -3,6 +3,8 @@ from .models import Comment
 from .models import CommentForm
 from .models import CommentRiviera
 from .models import CommentFormRiviera
+from .models import CommentBuenosAires
+from .models import CommentFormBuenosAires
 from .models import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
@@ -36,6 +38,15 @@ def start(request):
 def destinations(request):
     return render(request, 'destinations.html')
 
+def mexico(request):
+    return render(request, 'mexico.html')
+
+def colombia(request):
+    return render(request, 'colombia.html')
+
+def argentina(request):
+    return render(request, 'argentina.html')
+
 def sanandres(request):
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -67,3 +78,19 @@ def rivieramaya(request):
         'form': form
     }
     return render(request, 'rivieramaya.html', context)
+
+def buenosaires(request):
+    if request.method == 'POST':
+        form = CommentFormBuenosAires(request.POST)
+        if form.is_valid():
+            form.save()
+            name = form.cleaned_data.get('name')
+            comment = form.cleaned_data.get('comment')
+            form = CommentFormBuenosAires()
+    else:
+        form = CommentFormBuenosAires()
+    context = {
+        'comments': CommentBuenosAires.objects.all(),
+        'form': form
+    }
+    return render(request, 'buenosaires.html', context)
