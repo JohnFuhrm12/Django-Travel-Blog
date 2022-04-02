@@ -25,5 +25,9 @@ urlpatterns = [
     path('destinations', views.destinations),
     path('sanandrés', views.sanandres),
     path('rivieramaya', views.rivieramaya),
+    path('buenosaires', views.buenosaires),
+    path('méxico', views.mexico),
+    path('colombia', views.colombia),
+    path('argentina', views.argentina),
 ]
 
