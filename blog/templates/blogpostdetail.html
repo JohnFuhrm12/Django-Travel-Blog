@@ -37,8 +37,28 @@
             <div class="comments">
                 {% for comment in post.comments.all %}
                     <div class="comment-box">
+                        {% if comment.reply == None %}
                         <h3>By {{ comment.name }} on {{ comment.date_created }}</h3>
                         <p>{{ comment.comment }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="replies-container">
+                        {% for reply in comment.replies.all|dictsort:"id" %}
+                            <div class="comment-box">
+                                <h3>By {{ reply.name }} on {{ comment.date_created }}</h3>
+                                <p>{{ reply.comment }}</p>
+                            </div>
+                        {% endfor %}
+                        <div class="reply-form">
+                            {% if comment.reply == None %}
+                            <form method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="comment_id" value=" {{ comment.id }} ">
+                                {{ form.as_p }}
+                                <input class="post-reply" type="submit" value="Post Reply">
+                             </form>
+                            {% endif %}
+                        </div>
                     </div>
                 {% endfor %}
             </div>
