@@ -19,7 +19,7 @@ from blog import views
 
 # Configure URLs
 urlpatterns = [
-    path('home', views.index, name='home'),
+    path('', views.index, name='home'),
     path('admin', admin.site.urls, name='admin'),
     path('about', views.about, name='about'),
     path('start', views.start, name='start'),
