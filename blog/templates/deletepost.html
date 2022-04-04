@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load crispy_forms_tags %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a travel blog">
+        <title>Latin Nomad - Delete Post</title>
+        <link rel="stylesheet" href="../../static/styles.css">
+        <link rel="shortcut icon" type="image/png" href="../../static/favicon.png"/>
+        <script src="../../static/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <li><a href="../../home"><h1>Latin Nomad</h1></a></li>
+            <nav>
+                <ul class="top-nav">
+                    <li><a href="../../start"><h1>Start Here</h1></a></li>
+                    <li><a href="../../destinations"><h1>Destinations</h1></a></li>
+                    <li><a href="../../about"><h1>About</h1></a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <div class="delete-content">
+            <div class="delete-text"><h1>Delete: {{ post.title }}</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="delete-text2">
+                    <strong>Are you sure?</strong>
+                    <button class="delete-button">Delete</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

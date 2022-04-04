@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+{%load crispy_forms_tags %}
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="This is a travel blog">
-        <title>Latin Nomad</title>
+        <title>Latin Nomad - Add Post</title>
         <link rel="stylesheet" href="../static/styles.css">
         <link rel="shortcut icon" type="image/png" href="../static/favicon.png"/>
         <script src="../static/script.js" defer></script>
@@ -20,21 +21,15 @@
             </nav>
         </header>
         <hr>
-        <div class="featured">
-            <h1>Colombia</h1>
-            <div class="country-desc">
-                <div class="paragraph-block">
-                    <p1>An amazing biodiversity, breathaking viewsw, and an incredible collision of the Amazon, Andes, and Caribbean Sea. I've lived for over a year here and I know it well. See my latest posts from Colombia here.</p1>
-                </div>
-            </div>
-            <div class="featured-block">
-                <div class="featured-block2">
-                    <a href="posts/san-andres"><img src="../static/SanAndres/sa-me.jpg" class="featured-image" alt="Image of Post"></a>
-                    <a href="posts/san-andres"><h2>See San Andrés</h2></a>
-                    <hr>
-                    <a href=posts/san-andres""><h2>Colombia's Best Beaches</h2></a>
-                    <a href="posts/san-andres"><h2>Read More</h2></a>
-                </div>
+        <div class="add-edit-content">
+            <div class="add-edit-text"><h1>Add Post</h1></div>
+            <div class="add-post-form">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.media }}
+                    {{ form.as_p }}
+                    <button class="post-post">Post</button>
+                </form>
             </div>
         </div>
         <div class="nav-bottom">

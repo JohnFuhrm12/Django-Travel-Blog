@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load crispy_forms_tags %}
+{% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a travel blog">
+        <title>Latin Nomad - {{ post.title }}</title>
+        <link rel="stylesheet" href="../static/styles.css">
+        <link rel="shortcut icon" type="image/png" href="../static/favicon.png"/>
+        <script src="../static/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <li><a href="../home"><h1>Latin Nomad</h1></a></li>
+            <nav>
+                <ul class="top-nav">
+                    <li><a href="../start"><h1>Start Here</h1></a></li>
+                    <li><a href="../destinations"><h1>Destinations</h1></a></li>
+                    <li><a href="../about"><h1>About</h1></a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <div class="post-main-content">
+            {{ post.body|safe }}
+        </div>
+        <div class="comment-section-container">
+            <div class="comment-form">
+                <h2>Leave a Comment</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input class="post-comment" type="submit" value="Post Comment">
+                </form>
+            </div>
+            <div class="comments">
+                {% for comment in post.comments.all %}
+                    <div class="comment-box">
+                        <h3>By {{ comment.name }} on {{ comment.date_created }}</h3>
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <button class="topbutton" data-top-button>Go to Top</button>
+        </div>
+    </body>
+</html>

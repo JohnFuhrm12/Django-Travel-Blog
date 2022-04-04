@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="This is a travel blog">
-        <title>Latin Nomad</title>
+        <title>Latin Nomad - Start Here</title>
         <link rel="stylesheet" href="../static/styles.css">
         <link rel="shortcut icon" type="image/png" href="../static/favicon.png"/>
         <script src="../static/script.js" defer></script>
@@ -20,23 +20,33 @@
             </nav>
         </header>
         <hr>
-        <div class="featured">
-            <h1>Colombia</h1>
-            <div class="country-desc">
-                <div class="paragraph-block">
-                    <p1>An amazing biodiversity, breathaking viewsw, and an incredible collision of the Amazon, Andes, and Caribbean Sea. I've lived for over a year here and I know it well. See my latest posts from Colombia here.</p1>
-                </div>
+        {% if request.user.is_superuser %}
+        <div class="post-list">
+            <div class="add">
+                <a href="newpost">Add Post</a>
             </div>
-            <div class="featured-block">
-                <div class="featured-block2">
-                    <a href="posts/san-andres"><img src="../static/SanAndres/sa-me.jpg" class="featured-image" alt="Image of Post"></a>
-                    <a href="posts/san-andres"><h2>See San Andrés</h2></a>
-                    <hr>
-                    <a href=posts/san-andres""><h2>Colombia's Best Beaches</h2></a>
-                    <a href="posts/san-andres"><h2>Read More</h2></a>
+            {% for post in object_list %}
+                <div class="post-title">
+                    <li><a href="{% url 'article-detail' post.slug%}">{{ post.title }}</a></li>
                 </div>
-            </div>
+                <div class="edit-delete">
+                    <a href="{% url 'edit-post' post.slug%}">Edit Post</a>
+                    <a href="{% url 'delete-post' post.slug%}">Delete Post</a>
+                </div>
+            {% endfor %}
         </div>
+        {% else %}
+        <div class="post-list">
+            <div class="add">
+                <h1>All Posts</h1>
+            </div>
+            {% for post in object_list %}
+                <div class="post-title">
+                    <li><a href="{% url 'article-detail' post.slug%}">{{ post.title }}</a></li>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
         <div class="nav-bottom">
             <button class="topbutton" data-top-button>Go to Top</button>
         </div>
