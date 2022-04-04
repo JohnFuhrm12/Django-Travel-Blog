@@ -31,10 +31,11 @@ def about(request):
                 'email': form.cleaned_data['email_address'],
                 'message': form.cleaned_data['message'],
             }
+            email = form.cleaned_data['email_address']
             message = "\n".join(body.values())
 
             try:
-                send_mail(subject, message, 'johnfuhrmeister12@gmail.com', ['johnfuhrmeister12@gmail.com'])
+                send_mail(subject, message, email, ['johnfuhrmeister12@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
     form = ContactForm()
