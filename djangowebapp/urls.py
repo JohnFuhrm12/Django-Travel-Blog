@@ -17,17 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from blog import views
 
+# Configure URLs
 urlpatterns = [
     path('home', views.index, name='home'),
-    path('admin/', admin.site.urls),
-    path('about', views.about),
-    path('start', views.start),
-    path('destinations', views.destinations),
-    path('sanandrés', views.sanandres),
-    path('rivieramaya', views.rivieramaya),
-    path('buenosaires', views.buenosaires),
-    path('méxico', views.mexico),
-    path('colombia', views.colombia),
-    path('argentina', views.argentina),
+    path('admin', admin.site.urls, name='admin'),
+    path('about', views.about, name='about'),
+    path('start', views.start, name='start'),
+    path('destinations', views.destinations, name='destinations'),
+    path('méxico', views.mexico, name='mexico'),
+    path('colombia', views.colombia, name='colombia'),
+    path('argentina', views.argentina, name='argentina'),
+    path('posts', views.Posts.as_view(), name='posts'),
+    path('posts/<slug:slug>', views.ArticleDetailView.as_view(), name='article-detail'),
+    path('newpost', views.AddPost.as_view(), name='add-post'),
+    path('test/editpost/<slug:slug>', views.EditPost.as_view(), name='edit-post'),
+    path('test/deletepost/<slug:slug>', views.DeletePost.as_view(), name='delete-post'),
 ]
 
