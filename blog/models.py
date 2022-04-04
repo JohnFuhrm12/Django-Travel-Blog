@@ -33,6 +33,7 @@ class Comment(models.Model):
     name = models.CharField(max_length=30)
     comment = models.CharField(max_length=150)
     date_created = models.DateField(auto_now_add=True)
+    reply = models.ForeignKey('Comment', null=True, blank=True, related_name='replies', on_delete=models.CASCADE)
 
     # Order comments by most recent
     class Meta:

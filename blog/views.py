@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse_lazy, reverse
@@ -5,6 +6,8 @@ from django.views.generic.edit import FormMixin
 from django.core.mail import send_mail, BadHeaderError
 from .models import Post, ContactForm, Comment, CommentForm
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Render html pages for navbar links
 def index(request):
@@ -68,19 +71,29 @@ class ArticleDetailView(FormMixin, DetailView):
         context['form'] = CommentForm(initial={'post': self.object})
         return context
 
-    # Get form information
-    def post(self, request, *args, **kwargs):
+    # Get form information and handle comment replies
+    def post(self, request, slug):
         self.object = self.get_object()
+        post = get_object_or_404(Post, slug=slug)
+        comments = post.comments.filter(reply__isnull=True)
         form = self.get_form()
         if form.is_valid():
-            return self.form_valid(form)
-        else:
-            return self.form_invalid(form)
+            parent_obj = None
+            try:
+                reply_id = int(request.POST.get('comment_id'))
+            except:
+                reply_id = None
+            if reply_id:
+                parent_obj = Comment.objects.get(id=reply_id)
+                if parent_obj:
+                    reply_comment = form.save(commit=False)
+                    reply_comment.reply = parent_obj
+            new_comment = form.save(commit=False)
+            new_comment.post = post
+            new_comment.save()
+            return HttpResponseRedirect(request.path_info)
 
-    # Save form information
-    def form_valid(self, form):
-        form.save()
-        return super(ArticleDetailView, self).form_valid(form)
+        #(post.get_absolute_url())
 
 # Render html pages for adding, editing, and deleting posts
 class AddPost(CreateView):
