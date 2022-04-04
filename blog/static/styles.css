@@ -421,11 +421,11 @@ hr {
     background-color: black;
     text-align: center;
     width: 100%;
+    padding-top: 5px;
     padding-bottom: 5px;
 }
 
 .blog-pic-main {
-    margin-top: 50px;
     width: 700px;
     height: 700px;
     border-style: solid;
@@ -483,13 +483,16 @@ hr {
     color: rgb(0, 191, 255);
 }
 
-.post-main-content p1 {
+.post-main-content p {
     display: block;
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 30px;
     color: white;
     padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
 }
 
 .post-main-content p2 {
@@ -498,12 +501,6 @@ hr {
     padding-bottom: 50px;
     font-size: 30px;
     color: white;
-}
-
-.paragraph-block {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
 }
 /* Blog Pages */
 
@@ -660,4 +657,112 @@ hr {
     color: white;
     padding: 5px;
 }
+
+.paragraph-block {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
 /* Start/Destinations Pages */
+
+/* All Posts List */
+.post-list {
+    text-align: center;
+    background-color: black;
+    min-height: 800px;
+    padding-top: 5px;
+}
+
+.post-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.post-list a:hover {
+    color: rgb(0, 191, 255);
+}
+
+.add {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add h1 {
+    color: rgb(0, 191, 255);
+    font-size: 50px;
+}
+
+.post-title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.edit-delete {
+    margin-top: 5px;
+}
+
+/* All Posts List */
+
+/* Add/Edit Posts */
+.add-edit-content {
+    background-color: black;
+    min-height: 800px;
+}
+
+.delete-content {
+    background-color: black;
+    min-height: 650px;
+}
+
+.delete-text {
+    color: white;
+    padding-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.delete-text2 {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.delete-button {
+    margin-left: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.delete-button:hover {
+    background-color: rgb(150, 150, 150);
+}
+
+.add-edit-text {
+    color: white;
+    padding-top: 20px;
+    margin-left: 50px;
+}
+
+.add-post-form {
+    color: white;
+    margin-left: 50px;
+}
+
+.post-post {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+}
+
+.post-post:hover {
+    background-color: rgb(150, 150, 150);
+}
+
+/* Add/Edit Posts */
