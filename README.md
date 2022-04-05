@@ -1,5 +1,6 @@
 # Django-Travel-Blog
-A travel blog created with Python using the Django framework. Frontend created with Html, Css/Flexbox, and Javascript.
+A travel blog created with Python using the Django framework. Frontend created with Html, Css/Flexbox, and Javascript. Pushed to Heroku for production.
+Link to site: https://latinnomad.herokuapp.com/
 
 # Home-Page
 ![asd](https://user-images.githubusercontent.com/61069716/160566698-eefa9fe9-ec1c-4d20-9e07-2c508dc2011e.png)
