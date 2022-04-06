@@ -61,6 +61,7 @@ html, body {
 header li a {
     text-decoration: none;
     color: rgb(0, 191, 255);
+    font-size: 20px;
 }
 
 header li a:hover {
@@ -70,6 +71,7 @@ header li a:hover {
 .top-nav {
     list-style: none;
     padding-right: 20px;
+    font-size: 20px;
 }
 
 .top-nav li {
@@ -94,7 +96,7 @@ hr {
 /* Home-screen Carousel */
 .carousel {
     width: 100%;
-    height: 85%;
+    height: 600px;
     position: relative;
 }
 
@@ -161,6 +163,29 @@ hr {
     background-color: black;
     text-align: center;
     padding-top: 1px;
+    font-size: 30px;
+}
+
+.featured2 {
+    color: rgb(0, 191, 255);
+    background-color: black;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.featured2 h1 {
+    font-size: 60px;
+}
+
+.all-posts a {
+    color: rgb(0, 191, 255);
+    text-decoration: none;
+    font-size: 60px;
+}
+
+.all-posts a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .featured-block {
@@ -178,6 +203,10 @@ hr {
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
+    font-size: 22px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .featured-block1 a {
@@ -199,6 +228,10 @@ hr {
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
+    font-size: 22px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .featured-block2 a {
@@ -215,11 +248,14 @@ hr {
 
 .featured-block3 {
     background-color: rgb(0, 157, 209);
-    margin: 50px;
     padding: 10px;
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
+    font-size: 22px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .featured-block3 a {
@@ -236,8 +272,16 @@ hr {
 
 .featured-image {
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 390px;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.featured-image-country {
+    display: block;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     object-position: center;
 }
@@ -250,6 +294,7 @@ hr {
     background-color: black;
     text-align: center;
     padding-top: 1px;
+    font-size: 30px;
 }
 
 .country-block {
@@ -268,6 +313,9 @@ hr {
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .country a {
@@ -276,6 +324,7 @@ hr {
 }
 
 .country h2 {
+    font-size: 30px;
     background-color: rgb(0, 101, 138);
     border-style: solid;
     border-width: 4px;
@@ -291,12 +340,13 @@ hr {
     text-align: center;
     padding-top: 1px;
     padding-bottom: 1px;
+    font-size: 30px;
 }
 
 .featured-image2 {
     display: block;
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     object-fit: cover;
     object-position: center;
     background-color: rgb(0, 157, 209);
@@ -307,10 +357,11 @@ hr {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 .about-image {
+    margin-left: 8%;
     margin-right: 20px;
     margin-bottom: 20px;
     border-style: solid;
@@ -329,6 +380,7 @@ hr {
     border-width: 4px;
     border-color: rgb(16, 79, 161);
     text-align: center;
+    font-size: 30px;
 }
 
 .about-text a {
@@ -338,7 +390,7 @@ hr {
 .about-text h4 {
     color: black;
     padding: 10px;
-    max-width: 350px;
+    max-width: 500px;
     background-color: rgb(0, 157, 209);
     padding-top: 10px;
     padding-bottom: 10px;
@@ -348,6 +400,7 @@ hr {
     border-width: 4px;
     border-color: rgb(16, 79, 161);
     text-align: center;
+    font-size: 25px;
 }
 /* About Div */
 /* Home Page */
@@ -364,12 +417,14 @@ hr {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: black;
+    padding-bottom: 5%;
 }
 
 .top-pics-about h1 {
     color: rgb(0, 191, 255);
     margin-top: 50px;
     margin-left: 320px;
+    font-size: 40px;
 }
 
 .top-pics-about p {
@@ -377,13 +432,14 @@ hr {
     font-size: 25px;
     margin-top: 100px;
     margin-left: 200px;
-    max-width: 400px;
-    max-height: 300px;
+    max-width: 380px;
+    max-height: 800px;
     background-color: rgb(0, 157, 209);
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
-    padding: 10px;
+    padding: 15px;
+    font-size: 35px;
 }
 
 .about-pic1 {
@@ -426,8 +482,7 @@ hr {
 }
 
 .blog-pic-main {
-    width: 700px;
-    height: 700px;
+    width: 85%;
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
@@ -435,8 +490,7 @@ hr {
 
 .blog-pic {
     margin-top: 50px;
-    width: 600px;
-    height: 600px;
+    width: 50%;
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
@@ -444,8 +498,7 @@ hr {
 
 .blog-pic-med {
     margin-top: 50px;
-    width: 450px;
-    height: 500px;
+    width: 70%;
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
@@ -453,8 +506,7 @@ hr {
 
 .blog-pic-small {
     margin-top: 40px;
-    width: 450px;
-    height: 400px;
+    width: 70%;
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
@@ -462,8 +514,7 @@ hr {
 
 .blog-pic-wide {
     margin-top: 50px;
-    width: 650px;
-    height: 420px;
+    width: 85%;
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
@@ -471,15 +522,14 @@ hr {
 
 .blog-pic-wide-large {
     margin-top: 50px;
-    width: 800px;
-    height: 400px;
+    width: 85%;
     border-style: solid;
     border-width: 4px;
     border-color: rgb(16, 79, 161);
 }
 
 .post-main-content h1 {
-    font-size: 40px;
+    font-size: 60px;
     color: rgb(0, 191, 255);
 }
 
@@ -487,12 +537,12 @@ hr {
     display: block;
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    max-width: 940px;
 }
 
 .post-main-content p2 {
@@ -539,10 +589,11 @@ hr {
 }
 
 .post-reply {
-    padding: 10px;
+    padding: 15px;
     margin-top: 15px;
     margin-bottom: 35px;
-    margin-left: 160px;
+    margin-left: 185px;
+    font-size: 20px;
 }
 
 .post-reply:hover {
@@ -550,7 +601,7 @@ hr {
 }
 
 .comment-form {
-    font-size: 25px;
+    font-size: 32px;
     padding-left: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -562,12 +613,12 @@ hr {
 }
 
 .comments h3 {
-    font-size: 25px;
+    font-size: 30px;
     padding-left: 50px;
 }
 
 .comments p {
-    font-size: 25px;
+    font-size: 30px;
     padding-left: 50px;
 }
 
@@ -597,8 +648,9 @@ hr {
 }
 
 .post-comment {
-    padding: 10px;
+    padding: 18px;
     margin-top: 15px;
+    font-size: 20px;
 }
 
 .post-comment:hover {
@@ -683,7 +735,7 @@ hr {
 }
 
 .start-main-content h1 {
-    font-size: 40px;
+    font-size: 60px;
     color: rgb(0, 191, 255);
 }
 
@@ -691,7 +743,7 @@ hr {
     display: block;
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     padding: 5px;
 }
@@ -700,6 +752,13 @@ hr {
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
+}
+
+.paragraph-block p1 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    font-size: 40px;
 }
 /* Start/Destinations Pages */
 
@@ -720,6 +779,55 @@ hr {
 
 .post-list a:hover {
     color: rgb(0, 191, 255);
+}
+
+.post-list2 {
+    text-align: center;
+    background-color: black;
+    min-height: 1000px;
+    padding-bottom: 20%;
+}
+
+.post-list2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.post-list2 h1 {
+    font-size: 50px;
+}
+
+.post-list2 hr {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 3px solid black;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.post-list2 a:hover {
+    color: white;
+}
+
+.post-title2 {
+    background-color: rgb(0, 157, 209);
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(16, 79, 161);
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.post-title2 a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 45px;
 }
 
 .add {
@@ -802,5 +910,4 @@ hr {
 .post-post:hover {
     background-color: rgb(150, 150, 150);
 }
-
 /* Add/Edit Posts */
