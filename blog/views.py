@@ -1,4 +1,3 @@
-
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse_lazy, reverse
@@ -93,8 +92,6 @@ class ArticleDetailView(FormMixin, DetailView):
             new_comment.post = post
             new_comment.save()
             return HttpResponseRedirect(request.path_info)
-
-        #(post.get_absolute_url())
 
 # Render html pages for adding, editing, and deleting posts
 class AddPost(CreateView):
