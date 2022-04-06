@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZSLRNY9WN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VZSLRNY9WN');
+        </script>
         <meta charset="UTF-8">
         <meta name="description" content="This is a travel blog">
         <title>Latin Nomad - Start Here</title>
@@ -36,13 +45,15 @@
             {% endfor %}
         </div>
         {% else %}
-        <div class="post-list">
+        <div class="post-list2">
             <div class="add">
                 <h1>All Posts</h1>
             </div>
             {% for post in object_list %}
-                <div class="post-title">
-                    <li><a href="{% url 'article-detail' post.slug%}">{{ post.title }}</a></li>
+                <div class="post-title2">
+                    <h1>{{ post.title }}</h1>
+                    <hr>
+                    <h1><a href="{% url 'article-detail' post.slug%}">Read More</a></h1>
                 </div>
             {% endfor %}
         </div>

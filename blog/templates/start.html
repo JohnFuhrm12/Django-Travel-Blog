@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZSLRNY9WN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VZSLRNY9WN');
+        </script>
         <meta charset="UTF-8">
         <meta name="description" content="This is a travel blog">
         <title>Latin Nomad - Start Here</title>
@@ -27,13 +36,16 @@
                 <p1>Hey! I'm John, and I've fallen in love with Latin America. So what did I do about it? I set out to travel to each and every country it has of course!</p1>
                 <p1>Here you can find easy to read information about the places I've been to and my personal experiences there, as well as home helpful guides and tips on traveling in the region!</p1></p1>
                 <h1>About Latin Nomad</h1>
-                <img src="../static/AboutPage/profile-pic.jpg" class="blog-pic-med" alt="Image of Beach">
+                <a href="{% url 'about' %}"><img src="../static/AboutPage/profile-pic.jpg" class="blog-pic-med" alt="Image of Beach"></a>
                 <p1>At 19 years old, I dropped everything and booked a one-way solo trip to Colombia, and I have never looked back since.</p1>
                 <p1>I started this blog to share my experiences, as well as help any new backpackers and solo-travelers to start traveling and guide them through exactly what I went through.</p1>
             </div>
         </div>
-        <div class="featured">
+        <div class="featured2">
             <h1>Recent Blog Posts</h1>
+            <div class="all-posts">
+                <h1><a href="{% url 'posts' %}">See All Posts</a></h1>
+             </div>
             <div class="featured-block">
                 <div class="featured-block1">
                     <a href="posts/riviera-maya"><img src="../static/RivieraMaya/rm-me.jpg" class="featured-image" alt="Image of Post"></a>
