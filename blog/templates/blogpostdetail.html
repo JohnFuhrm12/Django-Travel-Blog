@@ -36,7 +36,7 @@
         </div>
         <div class="comment-section-container">
             <div class="comment-form">
-                <h2>Leave a Comment</h2>
+                <h2>Leave a Comment:</h2>
                 <form method="post">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -54,7 +54,7 @@
                     <div class="replies-container">
                         {% for reply in comment.replies.all|dictsort:"id" %}
                             <div class="comment-box">
-                                <h3>By {{ reply.name }} on {{ comment.date_created }}</h3>
+                                <h3>By {{ reply.name }} on {{ reply.date_created }}</h3>
                                 <p>{{ reply.comment }}</p>
                             </div>
                         {% endfor %}
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="nav-bottom">
-            <button class="topbutton" data-top-button>Go to Top</button>
+            <button class="topbutton" data-top-button><img src="../static/arrow.png"></button>
         </div>
     </body>
 </html>
